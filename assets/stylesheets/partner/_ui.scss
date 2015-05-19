@@ -1,0 +1,24 @@
+.tag {
+	-webkit-transition: all 0.3s 0s ease-out;  /* Saf3.2+, Chrome */
+	-moz-transition: all 0.3s 0s ease-out;  /* FF4+ */
+	-ms-transition: all 0.3s 0s ease-out;  /* IE10? */
+	-o-transition: all 0.3s 0s ease-out;  /* Opera 10.5+ */
+	transition: all 0.3s 0s ease-out; 
+
+	border-radius: 3px;
+	padding: .25em .5em .25em .75em;
+	background-color: $dark;
+	color: $light;
+	margin: 0 1em .5em 0;
+
+	&:after {
+		@include pseudo(auto, auto, "\00D7");
+		display: inline-block;
+		margin: 0 0 0 .5em;
+	}
+
+	&:hover {
+		color: white;
+	}
+}
+

@@ -1,0 +1,17 @@
+/* COLORS */
+$darkest: rgba(50, 51, 51, 1); // SSP darkest (text)
+$darker: rgba(80, 80, 80, 1); // SSP darker (toolbar icons)
+$dark: rgba(161, 161, 161, 1); // SSP Dark (border/progress bar / avatar icon)
+$medium: rgba(180, 180, 180, 1); // SSP Medium (active nav item / inactive toolbar icons)
+$light: rgba(215, 215, 215, 1); // SSP Light (navbar background, folder)
+$lighter: rgba(241, 241, 241, 1); // SSP Lighter (main area background)
+$lightest: rgba(255, 255, 255, 1);
+$border: $dark;
+$primary: rgba(28, 179, 166, 1);
+
+$status_new: #00BBFF; // blue
+$status_unpublished: #C28324; // yellow
+$status_readyforpublishing: $primary; // brand color
+$status_pending: #505050; // dark gray with clock or lock icon
+$status_error: #CA3F41; // red
+$status_published: rgba(255,255,255,0); // no color, text label

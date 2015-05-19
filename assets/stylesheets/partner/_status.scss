@@ -1,0 +1,71 @@
+.status {
+  text-align: center;
+  @include font;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(41, 45, 51, 1);
+  width: 200px;
+  height: 40px;
+  margin: 0;
+  line-height: 40px;
+  
+  
+  &:before {
+    display: inline-block;
+    content: "\ ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #C53154 transparent transparent;
+  }
+  
+  
+  
+  &.error {
+    // background-color: $status_error;
+    /* color: rgba(123, 21, 44, 1); */
+    
+    &:before {
+      border-color: transparent $status_error transparent transparent;
+    }
+  }
+  
+  &.unpublished {
+    // background-color: rgba(117, 124, 131, .75);
+    /* color: rgba(117, 124, 131, 1); */
+    
+    &:before {
+      border-color: transparent $status_unpublished transparent transparent;
+    }
+  }
+  
+  &.readyforpublishing {
+    // background-color: rgba(0, 177, 166, .75);
+    /* color: rgba(0, 177, 166, 1); */
+    
+    &:before {
+      border-color: transparent $status_readyforpublishing transparent transparent;
+    }
+  }
+  
+  &.published {
+    // background-color: rgba(41, 45, 51, 0);
+    // color: rgba(41, 45, 51, 0);
+    
+    &:before {
+      border-color: transparent $status_published transparent transparent;
+    }
+  }
+  
+  &.new {
+    // background-color: rgba(122, 182, 28, .75);
+    /* color: rgba(122, 182, 28, 1); */
+    
+    &:before {
+      border-color: transparent $status_new transparent transparent;
+    }
+  }
+}
+

@@ -1,0 +1,85 @@
+@-webkit-keyframes 
+load { 0% {
+stroke-dashoffset:0
+}
+}
+@-moz-keyframes 
+load { 0% {
+stroke-dashoffset:0
+}
+}
+@keyframes 
+load { 0% {
+stroke-dashoffset:0
+}
+}
+
+.progress {
+  width: 140px;
+  height: 140px;
+  background: none;
+  margin: 0 auto;
+}
+
+.progress>div {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #93A2AC;
+  font-family: Lato;
+  font-weight: 100;
+  margin: 2rem;
+}
+
+.progress>div:before {
+  content: attr(data-name);
+  position: absolute;
+  width: 100%;
+  bottom: -2rem;
+  font-weight: 400;
+}
+
+.progress>div:after {
+  content: attr(data-percent);
+  position: absolute;
+  width: 100%;
+  top: 3.7rem;
+  left: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.progress svg {
+  width: 10rem;
+  height: 10rem;
+}
+
+.progress svg:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+}
+
+.progress svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 25;
+  stroke-dasharray: 629;
+  stroke: rgba(255, 255, 255, 0.9);
+  -webkit-animation: load 1s;
+  -moz-animation: load 1s;
+  -o-animation: load 1s;
+  animation: load 1s;
+}
+
+path.progressbar {
+  stroke: rgba(40, 40, 40, .85) !important;
+  -webkit-transition: all 0.3s 0s ease-out;  /* Saf3.2+, Chrome */
+-moz-transition: all 0.3s 0s ease-out;  /* FF4+ */
+-ms-transition: all 0.3s 0s ease-out;  /* IE10? */
+-o-transition: all 0.3s 0s ease-out;  /* Opera 10.5+ */
+transition: all 0.3s 0s ease-out; 
+}

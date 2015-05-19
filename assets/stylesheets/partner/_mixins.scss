@@ -1,0 +1,40 @@
+@mixin font($family: primary) {
+	@if ($family == "secondary") {
+		font-family: "museo-slab";
+  		font-style: normal;
+  		font-weight: 500;
+	} @else if ($family == "primary") {
+		font-family: 'Helvetica Neue';
+  		font-weight: 100;
+	} @else {
+		font-family: $family;
+	}
+	line-height: 1.6em;		
+}
+
+/* MIXINS */
+@mixin outline($color:red) {
+  outline: 1px solid $color;
+}
+
+@mixin border {
+  border: 1px solid $border;
+}
+
+@mixin pseudo($width, $height, $content) {
+	display: block;
+	width: $width;
+	height: $height;
+	content: $content;
+}
+
+@mixin right_border_shadow($the_background_color) {
+	background: $the_background_color; /* Old browsers */
+	background: -moz-linear-gradient(left,  $the_background_color 0%, $the_background_color 96%, darken($the_background_color, 5) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,$the_background_color), color-stop(96%,$the_background_color), color-stop(100%,darken($the_background_color, 5))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  $the_background_color 0%,$the_background_color 96%,darken($the_background_color, 5) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  $the_background_color 0%,$the_background_color 96%,darken($the_background_color, 5) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  $the_background_color 0%,$the_background_color 96%,darken($the_background_color, 5) 100%); /* IE10+ */
+	background: linear-gradient(to right,  $the_background_color 0%,$the_background_color 96%,darken($the_background_color, 5) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$the_background_color', endColorstr='darken($the_background_color, 5)',GradientType=1 ); /* IE6-9 */
+}

@@ -1,0 +1,191 @@
+@inlcude "bootstrap";
+/* COLORS */
+/* BREAKPOINTS */
+/* MIXINS */
+*, *:before, *:after {
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important; }
+
+/* TYPOGRAPHY */
+p, h1, h2, h3, h4, nav {
+  font-family: "museo-slab";
+  font-style: normal;
+  font-weight: 500; }
+
+@-webkit-keyframes load {
+  0% {
+    stroke-dashoffset: 0; } }
+@-moz-keyframes load {
+  0% {
+    stroke-dashoffset: 0; } }
+@keyframes load {
+  0% {
+    stroke-dashoffset: 0; } }
+.progress {
+  width: 140px;
+  height: 140px;
+  background: none;
+  margin: 0 auto; }
+
+.helppanel {
+  background-color: #282828 !important;
+  height: 100vh;
+  color: #FDFDFD !important; }
+  .helppanel p, .helppanel h1, .helppanel h2, .helppanel h3, .helppanel h4, .helppanel h5, .helppanel h6 {
+    color: #FDFDFD !important;
+    text-align: center; }
+
+.progress > div {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #93A2AC;
+  font-family: Lato;
+  font-weight: 100;
+  margin: 2rem; }
+
+.progress > div:before {
+  content: attr(data-name);
+  position: absolute;
+  width: 100%;
+  bottom: -2rem;
+  font-weight: 400; }
+
+.progress > div:after {
+  content: attr(data-percent);
+  position: absolute;
+  width: 100%;
+  top: 3.7rem;
+  left: 0;
+  font-size: 2rem;
+  text-align: center; }
+
+.progress svg {
+  width: 10rem;
+  height: 10rem; }
+
+.progress svg:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg); }
+
+.progress svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 25;
+  stroke-dasharray: 629;
+  stroke: rgba(255, 255, 255, 0.9);
+  -webkit-animation: load 1s;
+  -moz-animation: load 1s;
+  -o-animation: load 1s;
+  animation: load 1s; }
+
+path.progressbar {
+  stroke: rgba(40, 40, 40, 0.85) !important;
+  -webkit-transition: all 0.3s 0s ease-out;
+  /* Saf3.2+, Chrome */
+  -moz-transition: all 0.3s 0s ease-out;
+  /* FF4+ */
+  -ms-transition: all 0.3s 0s ease-out;
+  /* IE10? */
+  -o-transition: all 0.3s 0s ease-out;
+  /* Opera 10.5+ */
+  transition: all 0.3s 0s ease-out; }
+
+.cards {
+  padding: 0;
+  text-align: center;
+  background-color: #F7F7F8;
+  height: 100vh;
+  overflow-y: scroll; }
+  .cards p {
+    line-height: 4rem; }
+
+.card {
+  display: block;
+  width: 180px;
+  border: 1px solid #E3E3E3;
+  margin: 1em auto;
+  padding: 0;
+  overflow: auto; }
+  .card.active {
+    border: 2px solid #1cb3a6;
+    border-radius: 2px; }
+  .card .status {
+    width: 180px;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    position: absolute; }
+    .card .status.ready {
+      background-color: rgba(28, 179, 166, 0.2);
+      color: #1cb3a6; }
+      .card .status.ready:before {
+        display: inline-block;
+        margin-right: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: -3px !important;
+        background-color: #1cb3a6;
+        border-radius: 50px;
+        content: "\ "; }
+  .card img {
+    width: 100%; }
+  .card input[type=checkbox] {
+    display: block;
+    float: left;
+    border: 1px solid #E3E3E3;
+    margin: 15px 5px 0 10px !important; }
+  .card p {
+    border: 1px solid #E3E3E3;
+    display: block;
+    width: 140px;
+    height: 40px;
+    float: right;
+    margin: 0;
+    padding-left: 1em;
+    line-height: 40px;
+    text-align: left; }
+
+.navigation {
+  background-color: #292D33;
+  color: #FDFDFD;
+  /* width: 20vw; */
+  /* max-width: 200px; */
+  overflow: hidden; }
+  @media (min-width: 992px) {
+    .navigation {
+      height: 100vh;
+      outline: 1px solid red; } }
+
+nav {
+  /* display: block; */
+  /* margin: 0; */
+  /* height: 100vh; */
+  background-color: #282828 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important; }
+  @media (min-width: 992px) {
+    nav {
+      height: 100vh; } }
+  nav li {
+    width: 100% !important;
+    padding: 0; }
+    nav li a {
+      font-family: "Museo Slab";
+      font-weight: 500 !important;
+      color: #FDFDFD !important;
+      height: 4rem;
+      line-height: 3em;
+      margin: 0;
+      width: 100% !important;
+      background-color: #282828; }
+    nav li.active a {
+      background-color: #292D33 !important;
+      border-right: 3px solid #1cb3a6;
+      color: #FDFDFD; }

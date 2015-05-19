@@ -1,0 +1,58 @@
+@include responsive-invisibility('.visible-xl');
+@include responsive-invisibility('.visible-xxl');
+
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block,
+.visible-xxl-block,
+.visible-xxl-inline,
+.visible-xxl-inline-block {
+  display: none !important;
+}
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-invisibility('.hidden-xl');
+}
+
+@media (min-width: $screen-xxl-min) {
+  @include responsive-invisibility('.hidden-xxl');
+}
+
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-visibility('.visible-xl');
+}
+.visible-xl-block {
+  @media (min-width: $screen-xl-min) {
+    display: block !important;
+  }
+}
+.visible-xl-inline {
+  @media (min-width: $screen-xl-min) {
+    display: inline !important;
+  }
+}
+.visible-xl-inline-block {
+  @media (min-width: $screen-xl-min) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $screen-xxl-min) {
+  @include responsive-visibility('.visible-xxl');
+}
+.visible-xxl-block {
+  @media (min-width: $screen-xxl-min) {
+    display: block !important;
+  }
+}
+.visible-xxl-inline {
+  @media (min-width: $screen-xxl-min) {
+    display: inline !important;
+  }
+}
+.visible-xxl-inline-block {
+  @media (min-width: $screen-xxl-min) {
+    display: inline-block !important;
+  }
+}
